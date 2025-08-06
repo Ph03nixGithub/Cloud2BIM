@@ -1,6 +1,20 @@
-from aux_functions import *
+import os
+import time
+import numpy as np
+
+from aux_functions import (
+    load_config_and_variables,
+    log,
+    read_e57,
+    e57_data_to_xyz,
+    load_xyz_file,
+    identify_slabs,
+    split_pointcloud_to_storeys,
+    identify_walls,
+    identify_openings,
+)
 from generate_ifc import IFCmodel
-from space_generator import *
+from space_generator import identify_zones
 
 # === Load Configuration ===
 config = load_config_and_variables()
